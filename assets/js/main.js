@@ -183,7 +183,24 @@
       }
     }
   });
+const map = new google.maps.Map(document.getElementById("map"), {
+  center: { lat: -32.833, lng: -70.597 }, // Coordenadas aproximadas de Los Andes
+  zoom: 15,
+  styles: [
+    {
+      featureType: "poi",
+      elementType: "labels",
+      stylers: [{ visibility: "off" }], // Oculta etiquetas de otros negocios/lugares
+    }
+  ]
+});
 
+// Añade únicamente tu marcador
+const marker = new google.maps.Marker({
+  position: { lat: -32.833, lng: -70.597 },
+  map: map,
+  title: "Global Transport",
+});
   /**
    * Navmenu Scrollspy
    */
